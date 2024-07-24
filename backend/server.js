@@ -14,9 +14,7 @@ dotenv.config();
 
 const __dirname = path.resolve();
 
-//const app = express();
-
-const PORT = process.env.PORT||5000
+const PORT = process.env.PORT||5000;
 
 
 app.use(express.json()); //to parse the incoming requests with json payloads(from req.body)
@@ -32,7 +30,7 @@ app.get("*", (req,res) => {
     res.sendFile(path.join(__dirname,"frontend","dist","index.html"));
 });
 
-server.listen(PORT,()=>{
+server.listen(PORT, ()=>{
     connectToMongoDB();
-    console.log(`server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });

@@ -29,7 +29,9 @@ const SearchInput = () => {
 
   return (
     <form onSubmit={handleSubmit} className='flex items-center gap-2'>
-        <input type="text" placeholder='Search...' className='input input-bordered rounded-full'
+        <input type="text" 
+        placeholder='Search...' 
+        className='input input-bordered rounded-full'
         value={search}
         onChange={(e) => setSearch(e.target.value)}
          />
